@@ -10,8 +10,19 @@ public class Emp{
         this.ename = ename;
         this.salary = salary;
     }
+    public double getSalary(){
+        return salary;
+    }
     public void disp(){
         System.out.println(eid+"  "+ename+"  "+salary+"  "+companyName);
+    }
+    public void calSalary(){
+        int da = 42;
+        int hra = 30;
+        int ta = 8;
+
+        double grossSalary = salary + (salary*da/100) + (salary*hra/100) + (salary*ta/100);
+        System.out.println("Gross Salary: "+grossSalary);
     }
 }
     
