@@ -5,17 +5,22 @@ public class Emp{
     private String ename;
     private static String companyName = "Jaba Corp";
 
-    public void setEmp(int eid, String ename, double salary){
+    public double getSalary(){
+        return salary;
+    }
+
+//parameterized constructor
+    public Emp(int eid, String ename, double salary){
         this.eid = eid;
         this.ename = ename;
         this.salary = salary;
     }
-    public double getSalary(){
-        return salary;
-    }
+
+
     public void disp(){
         System.out.println(eid+"  "+ename+"  "+salary+"  "+companyName);
     }
+    
     public void calSalary(){
         int da = 42;
         int hra = 30;

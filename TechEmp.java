@@ -1,16 +1,18 @@
 public class TechEmp extends Emp{
 
     int bonus;
-    public void setBonus(int bonus){
+    public TechEmp(int eid, String ename, double salary, int bonus){
+        super(eid, ename, salary); //calling superclass constructor
         this.bonus = bonus;
     }
-    
-    public void getBonus(){
-        System.out.println("Bonus: "+bonus);
+    @Override
+    public void disp(){
+        super.disp(); //calling superclass method
+        System.out.println(bonus);
     }
 
     //redefined method from superclass Emp
-
+    @Override
     public void calSalary(){ //method overriding signature remains same
         int da = 42;
         int hra = 30;
@@ -21,11 +23,8 @@ public class TechEmp extends Emp{
     }
 
     public static void main(String[] args){
-        TechEmp te = new TechEmp(); //paird with the superclass Emp
-        te.setEmp(301, "Jonte Simpson", 90000.0);
+        TechEmp te = new TechEmp(101, "Jay", 50000, 5000);
         te.disp();
         te.calSalary();
-        te.setBonus(10000);
-        te.getBonus();
-    }
+}
 }
