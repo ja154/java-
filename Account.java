@@ -1,4 +1,4 @@
-public class Account{
+public abstract class Account{
 
     private int accNo;
     private String accType;
@@ -13,4 +13,6 @@ public class Account{
     public void getAccount(){
         System.out.println(accNo+"  "+accType+"  "+accBalance);
     }
+
+    
 }
