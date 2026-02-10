@@ -12,6 +12,7 @@ public class Bank extends ATM{
     }
     @Override
     void disp(){
+        super.disp();
         System.out.println("Iam  Bank");   
     }
 
