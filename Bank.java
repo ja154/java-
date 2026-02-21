@@ -1,6 +1,6 @@
 public class Bank extends ATM{
 
-    int cashback; //chhild class specific variable
+    int cashback; //child class specific variable
 
     public Bank(double intRate, int cashback) {
         super(intRate); // calling parent class constructor
@@ -26,7 +26,7 @@ public class Bank extends ATM{
     }
 
     public static void main(String[] args) {
-        ATM a1 = new Bank(8.5,30);  // upcasting
+        ATM a1 = new Bank(8.5,30);  // upcasting from the Atm class to the Bank class
 
 
         a1.disp();
