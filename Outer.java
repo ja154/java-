@@ -8,7 +8,7 @@ class Outer {
     }
 
     public static void main(String[] args) {
-        Outer.StaticNested nested = new Outer.StaticNested();
-        nested.display();
+        Outer.StaticNested nestedObject = new Outer.StaticNested();
+        nestedObject.display();
     }
 }
