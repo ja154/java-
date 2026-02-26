@@ -1,23 +1,18 @@
 public class Outer {
     private String secretMessage = "Hello from the Outer world!";
 
-    // 1. Member Inner Class
-    class Inner {
-        void display() {
-            // Inner class accessing private member of Outer class
-            System.out.println("Inner says: " + secretMessage);
+public void disp(){
+    // Local inner class inside a method of the outer class
+    class Local{
+        void msg(){// method of local inner class acessing the private member of outer class
+            System.out.println("Data from outer class: " + secretMessage);    
         }
     }
-
-    public static void main(String[] args) {
-        // STEP 1: Create the Outer class object (The House)
-        Outer myOuter = new Outer();
-
-        // STEP 2: Create the Inner class object (The Room)
-        // Syntax: OuterClassName.InnerClassName name = outerObject.new InnerClassName();
-        Outer.Inner myInner = myOuter.new Inner();
-
-        // Now you can call the inner class method
-        myInner.display();
-    }
+    Local l = new Local(); // creating an instance of the local inner class
+    l.msg();
+}
+public static void main(String[] args) {
+    Outer outer = new Outer();
+    outer.disp(); // calling the method that contains the local inner class
+}
 }
