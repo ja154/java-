@@ -1,4 +1,4 @@
-public class A implements  Printable {
+public class A implements  Printable {// class A implements Printable interface
 
     public void print(){
         System.out.println("Print method");
