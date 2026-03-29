@@ -1,1 +1,6 @@
 node-v24.13.0-linux-x64/
+
+.idea/
+*.class
+*.iml
+out/
