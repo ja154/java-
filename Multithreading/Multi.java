@@ -22,7 +22,7 @@ public class Multi extends Thread {
         Multi thread1 = new Multi(); // default name assigned if i set none
         // once a thread is created we have to start it as it has the run method in  it
         thread1.start(); // - runnable - thread scheduler
-        thread1.join(500);// throws interruptedException  thus aftr thread1 is done printing 1-10 the thread2 and thread3 the start due to this join()method used on thread1
+        thread1.join(500);// throws interruptedException  thus after thread1 is done printing 1-10 the thread2 and thread3 the start due to this join()method used on thread1
 
         Multi thread2 = new Multi();
         thread2.setPriority(5);
